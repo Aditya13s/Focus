@@ -1,11 +1,13 @@
 package com.focus.app.ui.blocking
 
 import android.app.AlertDialog
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -68,17 +70,29 @@ class BlockingFragment : Fragment() {
             .setPositiveButton("Block") { _, _ ->
                 val pkg = editText.text.toString().trim()
                 if (pkg.isNotEmpty()) {
-                    viewModel.addBlockedApp(
-                        BlockedApp(
-                            packageName = pkg,
-                            appName = pkg.substringAfterLast('.')
-                                .replaceFirstChar { it.uppercase() }
-                        )
-                    )
+                    val appName = getInstalledAppName(pkg)
+                    if (appName == null) {
+                        Toast.makeText(
+                            requireContext(),
+                            "App not installed as package appears to be invalid",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    } else {
+                        viewModel.addBlockedApp(BlockedApp(packageName = pkg, appName = appName))
+                    }
                 }
             }
             .setNegativeButton("Cancel", null)
             .show()
+    }
+
+    private fun getInstalledAppName(packageName: String): String? {
+        return try {
+            val appInfo = requireContext().packageManager.getApplicationInfo(packageName, 0)
+            requireContext().packageManager.getApplicationLabel(appInfo).toString()
+        } catch (e: PackageManager.NameNotFoundException) {
+            null
+        }
     }
 
     override fun onDestroyView() {
