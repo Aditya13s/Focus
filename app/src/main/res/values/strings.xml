@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Focus</string>
+    <string name="accessibility_service_label">Focus App Blocker</string>
+    <string name="accessibility_service_description">Monitors app launches to enforce focus rules and show mindful delay prompts.</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_blocking">Block</string>
+    <string name="nav_focus">Focus</string>
+    <string name="nav_stats">Stats</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Dashboard -->
+    <string name="emergency_mode_on">🚨 Emergency Mode ON</string>
+    <string name="emergency_mode_off">🚨 Emergency Mode</string>
+
+    <!-- Focus -->
+    <string name="session_work">🎯 Focus Time</string>
+    <string name="session_break">☕ Break Time</string>
+    <string name="timer_start">Start</string>
+    <string name="timer_pause">Pause</string>
+    <string name="timer_resume">Resume</string>
+    <string name="timer_stop">Stop</string>
+
+    <!-- Delay Gate -->
+    <string name="delay_gate_title">Mindful Moment</string>
+    <string name="reason_bored">😴 Bored</string>
+    <string name="reason_habit">🔄 Habit</string>
+    <string name="reason_intentional">🎯 Intentional</string>
+    <string name="resist_button">✊ Resist! (+5 XP)</string>
+</resources>
