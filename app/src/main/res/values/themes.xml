@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Focus" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/focus_primary</item>
+        <item name="colorPrimaryContainer">@color/focus_primary_variant</item>
+        <item name="colorSecondary">@color/focus_secondary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnSecondary">@color/white</item>
+    </style>
+
+    <style name="Theme.Focus.Overlay" parent="Theme.Focus">
+        <item name="android:windowBackground">@color/delay_gate_background</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowAnimationStyle">@style/Animation.AppCompat.Dialog</item>
+    </style>
+
+</resources>

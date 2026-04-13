@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.focus.app.ui.dashboard.DashboardFragment"
+        android:label="Dashboard" />
+
+    <fragment
+        android:id="@+id/blockingFragment"
+        android:name="com.focus.app.ui.blocking.BlockingFragment"
+        android:label="Blocking" />
+
+    <fragment
+        android:id="@+id/focusFragment"
+        android:name="com.focus.app.ui.focus.FocusFragment"
+        android:label="Focus" />
+
+    <fragment
+        android:id="@+id/statsFragment"
+        android:name="com.focus.app.ui.stats.StatsFragment"
+        android:label="Stats" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.focus.app.ui.settings.SettingsFragment"
+        android:label="Settings" />
+
+</navigation>

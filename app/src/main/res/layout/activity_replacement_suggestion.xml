@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="What could you do instead? 🌱"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You opened this out of boredom or habit.\nHere are better alternatives:"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:alpha="0.7"
+        android:lineSpacingMultiplier="1.4"
+        android:layout_marginBottom="40dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_learn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📚 Learn Something New (Wikipedia)"
+        android:textSize="15sp"
+        android:layout_marginBottom="12dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_notes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📝 Write a Note"
+        android:textSize="15sp"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_marginBottom="12dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_breathe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🧘 Take a Breath"
+        android:textSize="15sp"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_marginBottom="32dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_proceed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="😞 Proceed Anyway"
+        android:textSize="13sp"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_marginBottom="4dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🏠 Go Home"
+        android:textSize="15sp" />
+
+</LinearLayout>
