@@ -30,16 +30,8 @@ class ReplacementSuggestionActivity : AppCompatActivity() {
         }
 
         binding.buttonNotes.setOnClickListener {
-            // Try to open a notes-like app; fall back to home
-            val intent = Intent(Intent.ACTION_MAIN).apply {
-                addCategory(Intent.CATEGORY_APP_NOTE)
-                flags = Intent.FLAG_ACTIVITY_NEW_TASK
-            }
-            if (intent.resolveActivity(packageManager) != null) {
-                startActivity(intent)
-            } else {
-                goHome()
-            }
+            // No standard category for notes apps; fall back to home
+            goHome()
             finish()
         }
 
